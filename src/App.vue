@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome"/>
+    <WelcomeMessage :msg="msg"/>
+    
   </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
+  import WelcomeMessage from './components/WelcomeMessage'
 
   export default {
     name: 'App',
+    data(){
+      return{
+        msg: 'Welcome, here'
+      }
+    },
     components: {
-      HelloWorld
+      WelcomeMessage,
     }
   }
 </script>
